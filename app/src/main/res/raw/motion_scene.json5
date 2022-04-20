@@ -1,0 +1,91 @@
+{
+  ConstraintSets: {
+    start: {
+      image: {
+        width: 'spread',
+        height: 130,
+        start: ['parent', 'start', 0],
+        end: ['parent', 'end', 0],
+        top: ['parent', 'top', 0],
+        custom: {
+          cardCornerShape: 8,
+          cardWidth: 120,
+          cardHeight: 200,
+          cardElevation: 1,
+          cardColor : "#FFFFFFFF",
+          imageCornerShape: 0,
+          imageBorderWidth: 0,
+          imageBorderColor: "#FFFFFFFF"
+        }
+      },
+      button: {
+        width: 34,
+        height: 34,
+        start: ['parent', 'start'],
+        end: ['parent', 'end' ],
+        top: ['image', 'bottom'],
+        bottom: ['image', 'bottom',],
+      },
+      text: {
+        width: "spread",
+        heigh: "spread",
+        start: ['parent', 'start', 10],
+        end: ['parent', 'end', 10],
+        top: ['button', 'bottom', -10],
+        bottom: ['parent', 'bottom'],
+      }
+    },
+
+    end: {
+      image: {
+        width: 60,
+        height: 60,
+        start: ['parent', 'start', 5],
+        end: ['parent', 'end', 5],
+        top: ['parent', 'top', 5],
+        bottom: ['parent', 'bottom', 5],
+        custom: {
+          cardCornerShape: 1000,
+          cardWidth: 80,
+          cardHeight: 80,
+          cardElevation: 0,
+          cardColor : "#0000FFFF",
+          imageCornerShape: 1000,
+          imageBorderWidth: 3,
+          imageBorderColor: "#FFFFFFFF"
+        }
+      },
+      button: {
+        width: 20,
+        height: 20,
+        end: ['image', 'end', ],
+        bottom: ['image', 'bottom',]
+      },
+      text: {
+        width: "spread",
+        heigh: "spread",
+        start: ['parent', 'start'],
+        end: ['parent', 'start'],
+        top: ['button', 'bottom'],
+        bottom: ['button', 'bottom'],
+      }
+    }
+  },
+
+  Transitions: {
+    story: {
+      from: 'start',
+      to: 'end',
+      pathMotionrc: 'startHorizontal',
+      keyFrames: {
+        keyAttributes: [
+          {
+//            target: [''],
+//            frame: [0,100],
+//            shape: ['']
+          }
+        ]
+      }
+    }
+  }
+}
